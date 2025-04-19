@@ -12,6 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "../../components/ui/table"
+import DefaultLayout from '@/layouts/DefaultLayout'
 
 type CrewMember = {
   id: number
@@ -54,7 +55,7 @@ const formatBounty = (bounty: number | null): string => {
 
 const Show = ({ crew }: ShowProps) => {
   return (
-    <div className="min-h-screen">
+    <DefaultLayout>
       <Head>
         <title>{`${crew.name} - Grandline Pirate Crew`}</title>
         <meta name="description" content={`${crew.name} is a powerful pirate crew from ${crew.sea.name} with a total bounty of ฿${formatBounty(crew.total_bounty)}. Learn about their members and achievements.`} />
@@ -167,7 +168,7 @@ const Show = ({ crew }: ShowProps) => {
           </motion.div>
         </div>
       </section>
-    </div>
+    </DefaultLayout>
   )
 }
 

@@ -5,6 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import { MaskedImage } from '../components/ui/masked-image'
+import { Link } from '@inertiajs/react'
+import DefaultLayout from '@/layouts/DefaultLayout'
 
 // Types for our data
 type CrewMember = {
@@ -91,8 +93,8 @@ const Home = ({ seas, topCrews }: HomeProps) => {
   const bestSea = getBestSea(seas);
 
   return (
-    <div className="min-h-screen">
-      <Navbar />
+    <DefaultLayout>
+   
       
       {/* Hero Section with map background */}
       <section className="relative overflow-hidden pt-32">
@@ -122,12 +124,16 @@ const Home = ({ seas, topCrews }: HomeProps) => {
                 Setting Sail Towards the New Era of Adventure. Join our crew and embark on an unforgettable journey.
               </p>
               <div className="flex justify-center gap-6">
+                <Link prefetch className=' cursor-pointer' href='/leaderboard'>
                 <Button variant="destructive" size="lg" className="px-8">
-                  Join Our Crew
+                  Leaderboard
                 </Button>
+                </Link>
+                <Link prefetch className=' cursor-pointer' href='/world-government'>
                 <Button variant="outline" size="lg" className="border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white px-8">
                   Learn More
                 </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -331,7 +337,7 @@ const Home = ({ seas, topCrews }: HomeProps) => {
           </motion.div>
         </div>
       </section>
-    </div>
+    </DefaultLayout>
   )
 }
 

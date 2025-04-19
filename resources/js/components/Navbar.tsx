@@ -11,9 +11,10 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '#about' },
-    { name: 'Crew', href: '#crew' },
-    { name: 'Features', href: '#features' },
+    { name: 'World Government', href: '/world-government' },
     { name: 'Leaderboard', href: '/leaderboard' },
+    { name: 'Marines', href: '/marines' },
+    
   ]
 
   return (
@@ -38,9 +39,11 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            <a href='https://www.facebook.com/groups/1272043480532115' className=' cursor-pointer' target='_blank'>
             <Button variant="destructive" size="lg">
               Join Crew
             </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,9 +77,11 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <a href='https://www.facebook.com/groups/1272043480532115' target='_blank'>
             <Button variant="destructive" size="lg" className="w-full">
               Join Crew
             </Button>
+            </a>
           </div>
         </motion.div>
       </div>
