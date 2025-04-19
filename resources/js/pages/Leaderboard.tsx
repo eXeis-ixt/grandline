@@ -4,7 +4,8 @@ import { Badge } from '../components/ui/badge'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import { Avatar, AvatarFallback } from '../components/ui/avatar'
-import { Link } from '@inertiajs/react'
+import { Head, Link } from '@inertiajs/react'
+import DefaultLayout from '@/layouts/DefaultLayout'
 
 // Types for our data structure
 type CrewMember = {
@@ -58,8 +59,11 @@ const Leaderboard = ({ crews = [], seas = [] }: LeaderboardProps) => {  // Add d
   })
 
   return (
-    <div className="min-h-screen">
-      <Navbar />
+    <DefaultLayout >
+   <Head>
+    <title>Leaderboard - Grandline</title>
+    <meta name="description" content="Leaderboard of the most wanted pirates and crews in the Grand Line" />
+   </Head>
       
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32">
@@ -215,7 +219,7 @@ const Leaderboard = ({ crews = [], seas = [] }: LeaderboardProps) => {  // Add d
           </motion.div>
         </div>
       </section>
-    </div>
+    </DefaultLayout>
   )
 }
 
