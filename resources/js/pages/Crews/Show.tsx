@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../..
 import { Badge } from '../../components/ui/badge'
 import { motion } from 'framer-motion'
 import Navbar from '../../components/Navbar'
+import { Head } from '@inertiajs/react'
 import {
   Table,
   TableBody,
@@ -54,6 +55,18 @@ const formatBounty = (bounty: number | null): string => {
 const Show = ({ crew }: ShowProps) => {
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>{`${crew.name} - Grandline Pirate Crew`}</title>
+        <meta name="description" content={`${crew.name} is a powerful pirate crew from ${crew.sea.name} with a total bounty of ฿${formatBounty(crew.total_bounty)}. Learn about their members and achievements.`} />
+        <meta name="keywords" content={`${crew.name}, pirate crew, ${crew.sea.name}, One Piece, bounty, ${crew.members.map(m => m.name).join(', ')}`} />
+        <meta property="og:title" content={`${crew.name} - Grandline Pirate Crew`} />
+        <meta property="og:description" content={`${crew.name} is a powerful pirate crew from ${crew.sea.name} with a total bounty of ฿${formatBounty(crew.total_bounty)}.`} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={`${crew.name} - Grandline Pirate Crew`} />
+        <meta name="twitter:description" content={`${crew.name} is a powerful pirate crew from ${crew.sea.name} with a total bounty of ฿${formatBounty(crew.total_bounty)}.`} />
+      </Head>
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -130,19 +143,19 @@ const Show = ({ crew }: ShowProps) => {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="w-[50px]">Rank</TableHead>
-                      <TableHead>Name</TableHead>
-                      <TableHead>Role</TableHead>
-                      <TableHead className="text-right">Bounty</TableHead>
+                      <TableHead className="w-[50px] text-lg py-4">Rank</TableHead>
+                      <TableHead className="text-lg py-4">Name</TableHead>
+                      <TableHead className="text-lg py-4">Role</TableHead>
+                      <TableHead className="text-lg py-4 text-right">Bounty</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {crew.members.map((member, index) => (
                       <TableRow key={member.id}>
-                        <TableCell className="font-medium">#{index + 1}</TableCell>
-                        <TableCell>{member.name}</TableCell>
-                        <TableCell>{member.role}</TableCell>
-                        <TableCell className="text-right text-red-500">
+                        <TableCell className="font-medium text-lg py-4">#{index + 1}</TableCell>
+                        <TableCell className="text-lg py-4">{member.name}</TableCell>
+                        <TableCell className="text-lg py-4">{member.role}</TableCell>
+                        <TableCell className="text-lg py-4 text-right text-red-500">
                           ฿{formatBounty(member.bounty)}
                         </TableCell>
                       </TableRow>

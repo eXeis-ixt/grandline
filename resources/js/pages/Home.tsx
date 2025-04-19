@@ -269,7 +269,7 @@ const Home = ({ seas, topCrews }: HomeProps) => {
               <h2 className="text-5xl font-bold mb-6">About Grandline</h2>
               <p className="text-xl mb-8 leading-relaxed">
                 We are a passionate group of One Piece enthusiasts dedicated to exploring the vast world of the Grand Line. 
-                Our crew consists of nakama from all corners of the world, united by our love for adventure and the pursuit of dreams.
+                Our crew consists of nakama from Bangladesh, united by our love for adventure and the pursuit of dreams.
               </p>
               <div className="flex gap-4">
                 <Badge variant="destructive" className="text-lg px-4 py-2">Adventure</Badge>
