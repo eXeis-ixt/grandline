@@ -12,6 +12,7 @@ class Sea extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'description'
     ];
 
