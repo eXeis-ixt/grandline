@@ -86,7 +86,7 @@ const Leaderboard = ({ crews = [], seas = [] }: LeaderboardProps) => {  // Add d
               transition={{ duration: 0.8 }}
             >
               <Badge variant="destructive" className="mb-4 text-lg px-4 py-2">Most Wanted</Badge>
-              <h1 className="text-7xl font-bold mb-6">
+              <h1 className="text-4xl md:text-7xl font-bold mb-6">
                 Pirate Crews Leaderboard
               </h1>
               <p className="text-2xl mb-12 max-w-2xl mx-auto leading-relaxed">
