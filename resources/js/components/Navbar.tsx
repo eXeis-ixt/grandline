@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '#about' },
     { name: 'World Government', href: '/world-government' },
-    { name: 'Leaderboard', href: '/leaderboard' },
+    { name: 'Pirates', href: '/leaderboard' },
     { name: 'Marines', href: '/marines' },
     
   ]
