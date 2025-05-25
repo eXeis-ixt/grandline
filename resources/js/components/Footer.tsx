@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="flex items-center space-x-2 text-base">
             <span className="text-card-foreground">Made with ❤️ by</span>
             <span className="font-bold text-card-foreground hover:text-primary transition-colors">
-              Hell's Tenant Crew
+              The Bloodwake Dynasty Crew
             </span>
           </div>
           <Separator className="w-48" />

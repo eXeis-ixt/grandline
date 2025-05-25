@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import { MaskedImage } from '../components/ui/masked-image'
-import { Link } from '@inertiajs/react'
+import { Head, Link } from '@inertiajs/react'
 import DefaultLayout from '@/layouts/DefaultLayout'
 
 // Types for our data
@@ -94,7 +94,8 @@ const Home = ({ seas, topCrews }: HomeProps) => {
 
   return (
     <DefaultLayout>
-   
+    <title>Home</title>
+    <meta name="description" content="The first Grand Line (One Piece) verse in bangladesh" />
       
       {/* Hero Section with map background */}
       <section className="relative overflow-hidden pt-32">
