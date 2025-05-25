@@ -43,7 +43,7 @@ class MembersRelationManager extends RelationManager
                                     ->numeric()
                                     ->minValue(0)
                                     ->prefix('฿')
-                                    ->mask('999,999,999,999')
+                                    ->inputMode('numeric')
                                     ->placeholder('Enter bounty amount')
                                     ->columnSpanFull(),
                             ]),
@@ -105,4 +105,4 @@ class MembersRelationManager extends RelationManager
                 ]),
             ]);
     }
-} 
+}
