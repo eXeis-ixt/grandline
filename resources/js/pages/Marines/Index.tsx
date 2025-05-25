@@ -12,7 +12,7 @@ type Marine = {
   status: string
   division: string
   specialty: string
-  bounty: string
+  bounty: number
   sea: {
     id: number
     name: string
@@ -47,6 +47,17 @@ const getStatusColor = (status: string) => {
     default:
       return 'bg-gray-500'
   }
+}
+
+const formatBounty = (bounty: number | null): string => {
+  if (bounty === null) return '0'
+  if (bounty >= 1000000000) {
+    return `${(bounty / 1000000000).toFixed(1)}B`
+  }
+  if (bounty >= 1000000) {
+    return `${(bounty / 1000000).toFixed(0)}M`
+  }
+  return bounty.toLocaleString()
 }
 
 const Index = ({ marines }: IndexProps) => {
@@ -96,7 +107,7 @@ const Index = ({ marines }: IndexProps) => {
                        {marine.bounty !== null && (
                         <div>
                           <div className="text-sm opacity-70 mb-1">Bounty</div>
-                          <div className="text-lg font-semibold">฿{marine.bounty}</div>
+                          <div className="text-lg font-semibold">฿฿{formatBounty(marine.bounty)}</div>
                         </div>
                         )}
                         <div>
