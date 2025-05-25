@@ -55,7 +55,7 @@ class CrewMemberResource extends Resource
                                     ->columnSpan(1),
                             ]),
                     ]),
-                
+
                 Section::make('Crew & Bounty')
                     ->description('Assign crew and set bounty')
                     ->icon('heroicon-o-currency-dollar')
@@ -106,8 +106,6 @@ class CrewMemberResource extends Resource
                 Tables\Columns\TextColumn::make('bounty')
                     ->numeric()
                     ->sortable()
-                    ->money('B')
-                    ->alignment('right')
                     ->color(fn (CrewMember $record): string => $record->bounty > 1000000000 ? 'danger' : 'success'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -167,4 +165,4 @@ class CrewMemberResource extends Resource
             'edit' => Pages\EditCrewMember::route('/{record}/edit'),
         ];
     }
-} 
+}
