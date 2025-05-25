@@ -12,6 +12,7 @@ type Marine = {
   status: string
   division: string
   specialty: string
+  bounty: string
   sea: {
     id: number
     name: string
@@ -92,6 +93,12 @@ const Index = ({ marines }: IndexProps) => {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
+                       {marine.bounty !== null && (
+                        <div>
+                          <div className="text-sm opacity-70 mb-1">Bounty</div>
+                          <div className="text-lg font-semibold">฿{marine.bounty}</div>
+                        </div>
+                        )}
                         <div>
                           <div className="text-sm opacity-70 mb-1">Division</div>
                           <div className="text-lg font-semibold">{marine.division}</div>
@@ -117,4 +124,4 @@ const Index = ({ marines }: IndexProps) => {
   )
 }
 
-export default Index 
+export default Index
