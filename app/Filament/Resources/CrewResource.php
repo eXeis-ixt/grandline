@@ -89,8 +89,7 @@ class CrewResource extends Resource
                     ->label('Members')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('total_bounty')
-                    ->label('Total Bounty')
-                    ->money('B')
+                    ->label('Total Bounty') 
                     ->getStateUsing(fn (Crew $record): float => $record->members->sum('bounty'))
                     ->sortable()
                     ->alignment('right')
