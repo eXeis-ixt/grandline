@@ -6,7 +6,7 @@ import { Separator } from '@/components/ui/separator';
 
 const WorldGovernmentPage = () => {
     const dictator = {
-        name: 'Taib Hasan Alif',
+        name: 'Israfil Rahman Abid ',
         role: 'Dictator',
         title: 'Dictator Of the World',
         abilities: [
